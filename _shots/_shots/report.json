@@ -1,0 +1,904 @@
+{
+  "src": "C:\\Users\\oshad\\Doubao\\chats\\2026-10-15\\new-chat\\aurelle-site\\_shots\\AURELLE_skincare_test.html",
+  "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/AURELLE_skincare_test.html",
+  "outdir": "C:\\Users\\oshad\\Doubao\\chats\\2026-10-15\\new-chat\\aurelle-site\\_shots\\_shots",
+  "include": [
+    "lint",
+    "screenshots",
+    "structure"
+  ],
+  "shots": {
+    "desktop": {
+      "screenshot": "C:\\Users\\oshad\\Doubao\\chats\\2026-10-15\\new-chat\\aurelle-site\\_shots\\_shots\\AURELLE_skincare_test_desktop.jpg",
+      "screenshotBytes": 44906,
+      "truncated": false,
+      "structure": {
+        "title": "AURELLE — Luxury Beauty, Curated",
+        "firstH1": "Beauty,made extraordinary.",
+        "viewport": {
+          "w": 1422,
+          "h": 748
+        },
+        "fullpage": {
+          "w": 1422,
+          "h": 1322
+        },
+        "counts": {
+          "section": 13,
+          "h1": 1,
+          "h2": 10,
+          "img": 21,
+          "canvas": 0,
+          "svg": 8,
+          "links": 32,
+          "buttons": 20
+        }
+      },
+      "consoleErrors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo.png"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/hero.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-serum.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-lipstick.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cream.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-perfume.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo-black.png"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cleanser.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-blush.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-balm.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-tintedbalm.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-bodylotion.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-bodywash.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-candle.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-oil.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-hairoil.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo-white.png"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-serum.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cream.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-lipstick.jpg"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+          "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-perfume.jpg"
+        }
+      ],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo.png",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/hero.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-serum.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-lipstick.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cream.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-perfume.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo-black.png",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cleanser.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-blush.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-balm.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-tintedbalm.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-bodylotion.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-bodywash.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-candle.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-oil.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-hairoil.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo-white.png",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-serum.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cream.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-lipstick.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        },
+        {
+          "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-perfume.jpg",
+          "resourceType": "Image",
+          "status": null,
+          "reason": "network_error"
+        }
+      ],
+      "reportSource": "cdp"
+    }
+  },
+  "engine": "chrome_cli",
+  "chromiumExec": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "engineDegraded": true,
+  "engineDegradedReason": "playwright 未装",
+  "elapsedSec": 13.58,
+  "schemaVersion": 2,
+  "status": "fail",
+  "engineInfo": {
+    "name": "chrome_cli",
+    "degraded": true,
+    "degradedReasons": [
+      "playwright 未装"
+    ]
+  },
+  "input": {
+    "original": "C:\\Users\\oshad\\Doubao\\chats\\2026-10-15\\new-chat\\aurelle-site\\_shots\\AURELLE_skincare_test.html",
+    "resolvedPath": "C:\\Users\\oshad\\Doubao\\chats\\2026-10-15\\new-chat\\aurelle-site\\_shots\\AURELLE_skincare_test.html",
+    "baseUrl": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/AURELLE_skincare_test.html",
+    "protocol": "file",
+    "cwd": "C:\\Users\\oshad\\Doubao\\chats\\2026-10-15\\new-chat",
+    "mediaMode": {
+      "reducedMotion": true
+    }
+  },
+  "artifacts": {
+    "screenshots": [
+      {
+        "viewport": "desktop",
+        "path": "C:\\Users\\oshad\\Doubao\\chats\\2026-10-15\\new-chat\\aurelle-site\\_shots\\_shots\\AURELLE_skincare_test_desktop.jpg",
+        "size": 44906,
+        "visualCoverage": {
+          "complete": true,
+          "reason": null
+        }
+      }
+    ]
+  },
+  "summary": {
+    "blocker": 0,
+    "error": 42,
+    "warning": 0,
+    "info": 0
+  },
+  "findings": [
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo.png"
+      },
+      "dedupeKey": "consoleErrors|desktop||0"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/hero.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||1"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-serum.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||2"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-lipstick.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||3"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cream.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||4"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-perfume.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||5"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo-black.png"
+      },
+      "dedupeKey": "consoleErrors|desktop||6"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cleanser.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||7"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-blush.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||8"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-balm.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||9"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-tintedbalm.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||10"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-bodylotion.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||11"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-bodywash.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||12"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-candle.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||13"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-oil.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||14"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-hairoil.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||15"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo-white.png"
+      },
+      "dedupeKey": "consoleErrors|desktop||16"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-serum.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||17"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cream.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||18"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-lipstick.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||19"
+    },
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "kind": "console",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "location": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-perfume.jpg"
+      },
+      "dedupeKey": "consoleErrors|desktop||20"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo.png",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||0"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/hero.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||1"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-serum.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||2"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-lipstick.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||3"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cream.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||4"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-perfume.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||5"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo-black.png",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||6"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cleanser.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||7"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-blush.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||8"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-balm.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||9"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-tintedbalm.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||10"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-bodylotion.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||11"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-bodywash.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||12"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-candle.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||13"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-oil.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||14"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-hairoil.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||15"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/logo-white.png",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||16"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-serum.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||17"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-cream.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||18"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-lipstick.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||19"
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "kind": "network",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "url": "file:///C:/Users/oshad/Doubao/chats/2026-10-15/new-chat/aurelle-site/_shots/assets/product-perfume.jpg",
+        "resourceType": "Image",
+        "status": null,
+        "reason": "network_error"
+      },
+      "dedupeKey": "resourceErrors|desktop||20"
+    }
+  ],
+  "prioritizedActions": [
+    {
+      "ruleId": "consoleErrors",
+      "severity": "error",
+      "viewport": "desktop",
+      "selector": null
+    },
+    {
+      "ruleId": "resourceErrors",
+      "severity": "error",
+      "viewport": "desktop",
+      "selector": null
+    }
+  ],
+  "reportPath": "C:\\Users\\oshad\\Doubao\\chats\\2026-10-15\\new-chat\\aurelle-site\\_shots\\_shots\\report.json"
+}

@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AURELLE — Luxury Beauty, Curated</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23B08D57'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link href="https://miaoda.feishu.cn/fonts/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== Tokens ===== */
+:root{
+  --ivory:#F7F2E9;
+  --bone:#EFE7D8;
+  --gold:#B08D57;
+  --gold-deep:#8F6F3F;
+  --ink:#211D18;
+  --ink-soft:#57504A;
+  --line:rgba(33,29,24,.12);
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Jost','Segoe UI',system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  font-weight:300;
+  color:var(--ink);
+  background:var(--ivory);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.wrap{width:min(1200px,92%);margin:0 auto}
+
+/* ===== Announcement marquee ===== */
+.marquee{
+  overflow:hidden;background:var(--ink);color:var(--ivory);
+  padding:.55rem 0;white-space:nowrap;
+}
+.marquee-track{display:inline-flex;gap:3rem;animation:marquee 22s linear infinite;will-change:transform}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;font-weight:400}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== Header ===== */
+.site-head{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,242,233,.86);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 0;
+}
+.logo{font-family:var(--serif);font-size:1.7rem;font-weight:600;letter-spacing:.06em}
+.logo img{height:34px;width:auto}
+.nav{display:none;gap:1.7rem}
+.nav a{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;position:relative;padding:.3rem 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .35s var(--ease)}
+.nav a:hover::after{width:100%}
+.nav a.active::after{width:100%}
+.head-actions{display:flex;align-items:center;gap:1.1rem}
+.icon-btn{background:none;border:none;display:flex;align-items:center;gap:.4rem;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.icon-btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.4}
+.burger{display:flex;flex-direction:column;gap:5px;background:none;border:none;padding:.4rem}
+.burger span{width:22px;height:1.4px;background:var(--ink);transition:.3s var(--ease)}
+.burger.open span:nth-child(1){transform:translateY(6.4px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6.4px) rotate(-45deg)}
+.mobile-menu{
+  position:fixed;inset:0;background:var(--ivory);z-index:40;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;
+  opacity:0;pointer-events:none;transition:opacity .4s var(--ease);
+}
+.mobile-menu.open{opacity:1;pointer-events:auto}
+.mobile-menu a{font-family:var(--serif);font-size:2rem}
+.mobile-menu a small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin-top:.2rem}
+
+/* ===== Hero ===== */
+.hero{position:relative;overflow:hidden;min-height:88vh;display:flex;align-items:center;justify-content:center}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:heroIn 2.2s var(--ease) forwards;will-change:transform}
+@keyframes heroIn{to{transform:scale(1)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(247,242,233,.72),rgba(247,242,233,.18) 45%,rgba(247,242,233,.28))}
+.hero-content{position:relative;text-align:center;padding:2rem;max-width:820px}
+.hero-kicker{font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:1.2rem}
+.hero-title{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,7vw,5rem);line-height:1.05}
+.hero-title em{font-style:italic;color:var(--gold-deep)}
+.hero-sub{margin:1.2rem auto 2rem;max-width:520px;font-size:1rem;color:var(--ink-soft)}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{
+  border:1px solid var(--ink);background:var(--ink);color:var(--ivory);
+  padding:.95rem 2.4rem;font-size:.75rem;letter-spacing:.26em;text-transform:uppercase;
+  transition:.4s var(--ease);
+}
+.btn:hover{background:var(--gold-deep);border-color:var(--gold-deep)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--ivory)}
+
+/* ===== Section scaffolding ===== */
+section{padding:5.5rem 0}
+.section-head{text-align:center;max-width:640px;margin:0 auto 3rem}
+.kicker{font-size:.7rem;letter-spacing:.36em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:.8rem}
+h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,4vw,3rem);line-height:1.12}
+.section-sub{margin-top:.9rem;color:var(--ink-soft)}
+
+/* ===== Reveal on scroll ===== */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== Bestsellers ===== */
+.grid-products{display:grid;grid-template-columns:1fr;gap:2.2rem}
+.product-card{position:relative}
+.product-media{position:relative;overflow:hidden;background:var(--bone);aspect-ratio:1/1}
+.product-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.product-card:hover .product-media img{transform:scale(1.07)}
+.product-tag{
+  position:absolute;top:14px;left:14px;background:var(--ivory);
+  font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;padding:.4rem .7rem;
+}
+.product-add{
+  position:absolute;left:0;right:0;bottom:0;
+  background:rgba(33,29,24,.92);color:var(--ivory);
+  border:none;padding:.95rem;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;
+  transform:translateY(101%);transition:transform .45s var(--ease);
+}
+.product-card:hover .product-add{transform:none}
+.product-info{padding-top:1rem;text-align:center}
+.product-name{font-family:var(--serif);font-size:1.25rem;font-weight:600}
+.product-desc{font-size:.8rem;color:var(--ink-soft);margin-top:.2rem}
+.product-price{font-size:.85rem;letter-spacing:.1em;margin-top:.5rem;color:var(--gold-deep)}
+
+/* ===== Editorial split (Glossier-style moving image) ===== */
+.split{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+.split-media{position:relative;overflow:hidden}
+.split-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.split-media:hover img{transform:scale(1.05)}
+.split-tall{aspect-ratio:4/5}
+.split-body h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:1.15}
+.split-body p{margin:1.1rem 0 1.6rem;color:var(--ink-soft);max-width:44ch}
+.link-arrow{font-size:.75rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);display:inline-flex;align-items:center;gap:.5rem}
+.link-arrow svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.link-arrow:hover svg{transform:translateX(6px)}
+
+/* ===== Brand strip ===== */
+.brands{background:var(--bone);text-align:center;padding:4.5rem 0}
+.brand-logos{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem 3rem;margin-top:2rem}
+.brand-logos span{font-family:var(--serif);font-size:1.4rem;color:var(--ink-soft);opacity:.85}
+
+/* ===== Dark ritual section ===== */
+.ritual{background:var(--ink);color:var(--ivory)}
+.ritual .kicker{color:var(--gold)}
+.ritual .section-sub{color:rgba(247,242,233,.7)}
+.steps{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:3rem;counter-reset:step}
+.step{position:relative;padding-left:3.2rem;border-left:1px solid rgba(247,242,233,.18)}
+.step::before{
+  counter-increment:step;content:"0" counter(step);
+  position:absolute;left:-1px;top:-.4rem;transform:translateX(-50%);
+  background:var(--ink);padding:0 .5rem;font-family:var(--serif);font-size:1.1rem;color:var(--gold);
+}
+.step h4{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin-bottom:.5rem}
+.step p{color:rgba(247,242,233,.7);font-size:.92rem;max-width:46ch}
+
+/* ===== Quote ===== */
+.quote{text-align:center;padding:6rem 0}
+.quote blockquote{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.5rem,3.4vw,2.5rem);line-height:1.3;max-width:820px;margin:0 auto}
+.quote cite{display:block;margin-top:1.4rem;font-family:var(--sans);font-style:normal;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep)}
+
+/* ===== Newsletter ===== */
+.newsletter{background:var(--bone)}
+.newsletter-form{display:flex;flex-direction:column;gap:.8rem;max-width:460px;margin:0 auto}
+.newsletter-form input{
+  flex:1;background:transparent;border:1px solid var(--ink);padding:1rem 1.2rem;
+  font-family:inherit;font-size:.95rem;color:var(--ink);outline:none;
+}
+.newsletter-form input:focus{border-color:var(--gold)}
+.newsletter-form .btn{width:100%}
+.form-note{text-align:center;font-size:.72rem;color:var(--ink-soft);margin-top:.8rem}
+
+/* ===== Footer ===== */
+footer{background:var(--ink);color:rgba(247,242,233,.8);padding:3.5rem 0 2.5rem}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:2rem}
+.foot-brand img{height:38px;width:auto;margin-bottom:1rem}
+.foot-brand p{font-size:.85rem;max-width:34ch;color:rgba(247,242,233,.65)}
+.foot-col h5{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;font-weight:400}
+.foot-col a{display:block;font-size:.88rem;padding:.28rem 0;color:rgba(247,242,233,.75);transition:color .3s}
+.foot-col a:hover{color:var(--ivory)}
+.foot-bottom{border-top:1px solid rgba(247,242,233,.14);margin-top:2.5rem;padding-top:1.5rem;display:flex;flex-direction:column;gap:.6rem;font-size:.72rem;letter-spacing:.1em;color:rgba(247,242,233,.5)}
+
+/* ===== Category pages ===== */
+.cat-view{display:none}
+.cat-view.active{display:block}
+.cat-head{text-align:center;padding:3.5rem 0 2.5rem}
+.cat-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:1.6rem}
+.cat-back svg{width:15px;height:15px;transition:transform .35s var(--ease)}
+.cat-back:hover svg{transform:translateX(-5px)}
+.cat-count{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-soft);margin-top:.8rem}
+
+/* ===== Toast ===== */
+.toast{
+  position:fixed;left:50%;bottom:2rem;transform:translate(-50%,140%);
+  background:var(--ink);color:var(--ivory);padding:.9rem 1.6rem;z-index:90;
+  font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+  transition:transform .5s var(--ease);border-left:2px solid var(--gold);
+}
+.toast.show{transform:translate(-50%,0)}
+
+/* ===== Desktop ===== */
+@media (min-width:768px){
+  .nav{display:flex}
+  .burger{display:none}
+  .grid-products{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .foot-grid{grid-template-columns:1.6fr 1fr 1fr 1fr}
+  .newsletter-form{flex-direction:row}
+  .newsletter-form .btn{width:auto}
+}
+@media (min-width:1024px){
+  .grid-products{grid-template-columns:repeat(4,1fr)}
+}
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .marquee-track{animation:none}
+  .hero-media img{animation:none;transform:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  .product-media img,.split-media img{transition:none}
+}
+</style>
+</head>
+<body>
+<!-- ===== Top marquee ===== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Complimentary samples with every order</span><span>Worldwide express delivery</span><span>Luxury beauty, curated</span><span>Authentic brands only</span><span>Members earn on every purchase</span>
+    <span>Complimentary samples with every order</span><span>Worldwide express delivery</span><span>Luxury beauty, curated</span><span>Authentic brands only</span><span>Members earn on every purchase</span>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a href="#top" class="logo" aria-label="AURELLE home"><img src="assets/logo.png" alt="AURELLE"></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#/skincare">Skin Care</a>
+      <a href="#/makeup">Makeup</a>
+      <a href="#/balms">Balms</a>
+      <a href="#/body">Body</a>
+      <a href="#/fragrance">Fragrance</a>
+      <a href="#/oils">Oils</a>
+    </nav>
+    <div class="head-actions">
+      <button class="icon-btn" id="bagBtn" aria-label="Shopping bag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l1 13H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="bag-label">Bag</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Mobile menu ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#/skincare">Skin Care<small>Cleanse &amp; treat</small></a>
+  <a href="#/makeup">Makeup<small>Colour &amp; glow</small></a>
+  <a href="#/balms">Balms<small>Lip care</small></a>
+  <a href="#/body">Body<small>Silk-soft rituals</small></a>
+  <a href="#/fragrance">Fragrance<small>Signatures</small></a>
+  <a href="#/oils">Oils<small>Face &amp; hair elixirs</small></a>
+</div>
+
+<main id="top">
+<div id="homeView">
+<!-- ===== Hero ===== -->
+<section class="hero" id="hero">
+  <div class="hero-media"><img src="assets/hero.jpg" alt="Luxury beauty products on ivory silk"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <p class="hero-kicker reveal">Luxury beauty, curated</p>
+    <h1 class="hero-title reveal">Beauty,<br>made <em>extraordinary.</em></h1>
+    <p class="hero-sub reveal">AURELLE brings the world's most coveted cosmetics houses to one elegant destination. Discover the rituals, the icons and the essentials.</p>
+    <div class="hero-cta reveal">
+      <a href="#shop" class="btn">Shop Bestsellers</a>
+      <a href="#ritual" class="btn ghost">Our Philosophy</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Bestsellers ===== -->
+<section id="shop">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">The Edit</p>
+      <h2 class="title">Bestselling Icons</h2>
+      <p class="section-sub">The products our clients return to, season after season.</p>
+    </div>
+    <div class="grid-products">
+      <article class="product-card reveal">
+        <div class="product-media">
+          <span class="product-tag">New</span>
+          <img src="assets/product-mac.jpg" alt="MAC Lip Color">
+          <button class="product-add" data-add="MAC Lip Color">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">MAC Lip Color</p>
+          <p class="product-desc">Creamy satin finish</p>
+          <p class="product-price">LKR 1500</p>
+        </div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media">
+          <img src="assets/product-dior.jpg" alt="DIOR Sauvage Perfume">
+          <button class="product-add" data-add="DIOR Sauvage Perfume">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">DIOR Sauvage Perfume</p>
+          <p class="product-desc">Bold, fresh eau de toilette</p>
+          <p class="product-price">LKR 5000</p>
+        </div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media">
+          <span class="product-tag">Icon</span>
+          <img src="assets/product-rashel.jpg" alt="DR. Rashel Magnetic Face Mask">
+          <button class="product-add" data-add="DR. Rashel Magnetic Face Mask">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">DR. Rashel Magnetic Face Mask</p>
+          <p class="product-desc">Detoxifying magnetic black mask</p>
+          <p class="product-price">LKR 2000</p>
+        </div>
+      </article>
+      <article class="product-card reveal">
+        <div class="product-media">
+          <img src="assets/product-loreal.jpg" alt="Loreal Shampoo">
+          <button class="product-add" data-add="Loreal Shampoo">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Loreal Shampoo</p>
+          <p class="product-desc">Colour-protecting hair care</p>
+          <p class="product-price">LKR 2000</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Editorial split ===== -->
+<section id="about" style="padding-top:1rem">
+  <div class="wrap split">
+    <div class="split-media split-tall reveal">
+      <img src="assets/logo-black.png" alt="AURELLE emblem" style="object-fit:contain;background:var(--bone)">
+    </div>
+    <div class="split-body reveal">
+      <p class="kicker">The AURELLE House</p>
+      <h3>One destination.<br>Every icon.</h3>
+      <p>From heritage maisons to cult independents, AURELLE unites the finest names in beauty under one roof. Each product is sourced direct, vetted for authenticity, and delivered in our signature ivory packaging.</p>
+      <a class="link-arrow" href="#shop">Discover the edit
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h18M14 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Brands ===== -->
+<section class="brands" id="brands">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">The Maisons</p>
+      <h2 class="title">Every Coveted House</h2>
+      <p class="section-sub">A curated portfolio of the world's most celebrated beauty brands.</p>
+    </div>
+    <div class="brand-logos reveal">
+      <span>Skincare</span><span>Makeup</span><span>Fragrance</span><span>Hair</span><span>Body</span><span>Tools</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Ritual (dark, moving parallax) ===== -->
+<section class="ritual" id="ritual">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Our Philosophy</p>
+      <h2 class="title">The AURELLE Ritual</h2>
+      <p class="section-sub">Three steps to a considered, luxurious routine.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <h4>Cleanse</h4>
+        <p>Begin with a gentle cleanse that respects the skin's natural balance — the foundation of every ritual.</p>
+      </div>
+      <div class="step reveal">
+        <h4>Nourish</h4>
+        <p>Layering concentrated essences and creams to hydrate deeply, morning and night.</p>
+      </div>
+      <div class="step reveal">
+        <h4>Illuminate</h4>
+        <p>Finish with luminosity — a touch of glow that celebrates you, never masks you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Quote ===== -->
+<section class="quote">
+  <div class="wrap">
+    <blockquote class="reveal">"AURELLE feels like stepping into a private atelier — every product, chosen with intention."</blockquote>
+    <cite class="reveal">— Vogue Beauty Desk</cite>
+  </div>
+</section>
+
+<!-- ===== Newsletter ===== -->
+<section class="newsletter" id="newsletter">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Stay Close</p>
+      <h2 class="title">Join the Inner Circle</h2>
+      <p class="section-sub">Early access to new drops, members-only gifts and beauty notes from our editors.</p>
+    </div>
+    <form class="newsletter-form reveal" id="newsForm">
+      <input type="email" required placeholder="Your email address" aria-label="Email address">
+      <button type="submit" class="btn">Subscribe</button>
+    </form>
+    <p class="form-note">By subscribing you agree to receive AURELLE communications. Unsubscribe anytime.</p>
+  </div>
+</section>
+</div><!-- /#homeView -->
+
+<!-- ===== Category: Skin Care ===== -->
+<section class="cat-view" id="view-skincare">
+  <div class="wrap">
+    <div class="cat-head">
+      <a class="cat-back" href="#top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 12H3M10 6l-6 6 6 6"/></svg>
+        Back to Home
+      </a>
+      <p class="kicker">Skin Care</p>
+      <h2 class="title">Cleanse. Treat. Glow.</h2>
+      <p class="section-sub">Concentrated formulas for radiant, balanced skin.</p>
+      <p class="cat-count">4 products</p>
+    </div>
+    <div class="grid-products">
+      <article class="product-card">
+        <div class="product-media">
+          <span class="product-tag">New</span>
+          <img src="assets/product-24kgold.jpg" alt="DR. Rashel 24K GOLD">
+          <button class="product-add" data-add="DR. Rashel 24K GOLD">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">DR. Rashel 24K GOLD</p>
+          <p class="product-desc">Gold-infused luxury skincare set</p>
+          <p class="product-price">LKR 2000</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/product-greentea.jpg" alt="DR. Rashel Green Tea Serum">
+          <button class="product-add" data-add="DR. Rashel Green Tea Serum">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">DR. Rashel Green Tea Serum</p>
+          <p class="product-desc">Purifying green tea skincare set</p>
+          <p class="product-price">LKR 1500</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/product-vitaminc.jpg" alt="DR. Rashel Vitamin C Face Pack">
+          <button class="product-add" data-add="DR. Rashel Vitamin C Face Pack">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">DR. Rashel Vitamin C Face Pack</p>
+          <p class="product-desc">Brightening anti-aging face pack</p>
+          <p class="product-price">LKR 1500</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-media">
+          <span class="product-tag">Icon</span>
+          <img src="assets/product-suncream.jpg" alt="DR. Rashel Sun Cream SPF 60">
+          <button class="product-add" data-add="DR. Rashel Sun Cream SPF 60">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">DR. Rashel Sun Cream SPF 60</p>
+          <p class="product-desc">Gold &amp; collagen anti-ageing sunscreen</p>
+          <p class="product-price">LKR 2400</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Category: Makeup ===== -->
+<section class="cat-view" id="view-makeup">
+  <div class="wrap">
+    <div class="cat-head">
+      <a class="cat-back" href="#top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 12H3M10 6l-6 6 6 6"/></svg>
+        Back to Home
+      </a>
+      <p class="kicker">Makeup</p>
+      <h2 class="title">Colour, Elevated.</h2>
+      <p class="section-sub">Sculpt, colour and glow with featherweight formulas.</p>
+      <p class="cat-count">3 products</p>
+    </div>
+    <div class="grid-products">
+      <article class="product-card">
+        <div class="product-media">
+          <span class="product-tag">New</span>
+          <img src="assets/product-macblush.jpg" alt="MAC Rose Blusher">
+          <button class="product-add" data-add="MAC Rose Blusher">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">MAC Rose Blusher</p>
+          <p class="product-desc">Buildable powder glow</p>
+          <p class="product-price">LKR 1000</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/product-maceyeliner.jpg" alt="MAC Eye Liner">
+          <button class="product-add" data-add="MAC Eye Liner">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">MAC Eye Liner</p>
+          <p class="product-desc">Precision liquid liner</p>
+          <p class="product-price">LKR 1200</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-media">
+          <span class="product-tag">Icon</span>
+          <img src="assets/product-maclipsticks.jpg" alt="MAC Lipstick">
+          <button class="product-add" data-add="MAC Lipstick">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">MAC Lipstick</p>
+          <p class="product-desc">Creamy satin finish</p>
+          <p class="product-price">LKR 1000</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Category: Balms ===== -->
+<section class="cat-view" id="view-balms">
+  <div class="wrap">
+    <div class="cat-head">
+      <a class="cat-back" href="#top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 12H3M10 6l-6 6 6 6"/></svg>
+        Back to Home
+      </a>
+      <p class="kicker">Balms</p>
+      <h2 class="title">Kiss-soft Care.</h2>
+      <p class="section-sub">Nourishing balms and tinted comforts for the lips.</p>
+      <p class="cat-count">2 products</p>
+    </div>
+    <div class="grid-products">
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/product-balm.jpg" alt="Nourish Lip Balm">
+          <button class="product-add" data-add="Nourish Lip Balm">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Nourish Lip Balm</p>
+          <p class="product-desc">24-hour moisture veil</p>
+          <p class="product-price">$24</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-media">
+          <span class="product-tag">New</span>
+          <img src="assets/product-tintedbalm.jpg" alt="Nude Tint Balm">
+          <button class="product-add" data-add="Nude Tint Balm">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Nude Tint Balm</p>
+          <p class="product-desc">Sheer, natural flush</p>
+          <p class="product-price">$26</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Category: Body ===== -->
+<section class="cat-view" id="view-body">
+  <div class="wrap">
+    <div class="cat-head">
+      <a class="cat-back" href="#top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 12H3M10 6l-6 6 6 6"/></svg>
+        Back to Home
+      </a>
+      <p class="kicker">Body</p>
+      <h2 class="title">Silk, Head to Toe.</h2>
+      <p class="section-sub">Creamy washes and lotions for velvet-soft skin.</p>
+      <p class="cat-count">2 products</p>
+    </div>
+    <div class="grid-products">
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/product-bodylotion.jpg" alt="Silk Body Lotion">
+          <button class="product-add" data-add="Silk Body Lotion">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Silk Body Lotion</p>
+          <p class="product-desc">Lightweight lasting hydration</p>
+          <p class="product-price">$48</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/product-bodywash.jpg" alt="Velvet Body Wash">
+          <button class="product-add" data-add="Velvet Body Wash">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Velvet Body Wash</p>
+          <p class="product-desc">Creamy, skin-softening lather</p>
+          <p class="product-price">$38</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Category: Fragrance ===== -->
+<section class="cat-view" id="view-fragrance">
+  <div class="wrap">
+    <div class="cat-head">
+      <a class="cat-back" href="#top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 12H3M10 6l-6 6 6 6"/></svg>
+        Back to Home
+      </a>
+      <p class="kicker">Fragrance</p>
+      <h2 class="title">Signatures of Memory.</h2>
+      <p class="section-sub">Eaux de parfum and home scents to collect.</p>
+      <p class="cat-count">2 products</p>
+    </div>
+    <div class="grid-products">
+      <article class="product-card">
+        <div class="product-media">
+          <span class="product-tag">Icon</span>
+          <img src="assets/product-perfume.jpg" alt="Eau de Parfum Lumière">
+          <button class="product-add" data-add="Eau de Parfum Lumière">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Eau de Parfum Lumière</p>
+          <p class="product-desc">Golden amber &amp; white musk</p>
+          <p class="product-price">$120</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/product-candle.jpg" alt="Amber Home Candle">
+          <button class="product-add" data-add="Amber Home Candle">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Amber Home Candle</p>
+          <p class="product-desc">Warm, enveloping glow</p>
+          <p class="product-price">$52</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Category: Oils ===== -->
+<section class="cat-view" id="view-oils">
+  <div class="wrap">
+    <div class="cat-head">
+      <a class="cat-back" href="#top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 12H3M10 6l-6 6 6 6"/></svg>
+        Back to Home
+      </a>
+      <p class="kicker">Oils</p>
+      <h2 class="title">Liquid Gold.</h2>
+      <p class="section-sub">Face and hair elixirs that melt in and illuminate.</p>
+      <p class="cat-count">2 products</p>
+    </div>
+    <div class="grid-products">
+      <article class="product-card">
+        <div class="product-media">
+          <img src="assets/product-oil.jpg" alt="24K Radiance Oil">
+          <button class="product-add" data-add="24K Radiance Oil">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">24K Radiance Oil</p>
+          <p class="product-desc">Gold-infused facial elixir</p>
+          <p class="product-price">$76</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-media">
+          <span class="product-tag">New</span>
+          <img src="assets/product-hairoil.jpg" alt="Argan Hair Elixir">
+          <button class="product-add" data-add="Argan Hair Elixir">Add to Bag</button>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Argan Hair Elixir</p>
+          <p class="product-desc">Frizz-taming shine finish</p>
+          <p class="product-price">$58</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo-white.png" alt="AURELLE">
+        <p>Luxury beauty, curated for the discerning. The world's finest houses, one elegant destination.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Shop</h5>
+        <a href="#shop">Bestsellers</a>
+        <a href="#brands">Skincare</a>
+        <a href="#brands">Makeup</a>
+        <a href="#brands">Fragrance</a>
+      </div>
+      <div class="foot-col">
+        <h5>House</h5>
+        <a href="#about">Our Story</a>
+        <a href="#ritual">Philosophy</a>
+        <a href="#newsletter">Newsletter</a>
+      </div>
+      <div class="foot-col">
+        <h5>Care</h5>
+        <a href="#newsletter">Contact</a>
+        <a href="#newsletter">Shipping &amp; Returns</a>
+        <a href="#newsletter">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 AURELLE. All rights reserved.</span>
+      <span>Made with care — a demo website.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Toast ===== -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  'use strict';
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Toast */
+  var toast = document.getElementById('toast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2600);
+  }
+
+  /* Bag button */
+  document.getElementById('bagBtn').addEventListener('click', function(){
+    showToast('Your bag is waiting — shopping opens soon.');
+  });
+
+  /* Add to bag buttons */
+  var addBtns = document.querySelectorAll('.product-add');
+  Array.prototype.forEach.call(addBtns, function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-add') || 'This item';
+      showToast(name + ' added to bag (demo).');
+    });
+  });
+
+  /* Newsletter */
+  document.getElementById('newsForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    showToast('Welcome to the Inner Circle.');
+    this.reset();
+  });
+
+  /* Mobile menu */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  Array.prototype.forEach.call(menu.querySelectorAll('a'), function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+
+  /* Scroll reveal */
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduceMotion){
+    var io = new IntersectionObserver(function(entries){
+      Array.prototype.forEach.call(entries, function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+    Array.prototype.forEach.call(reveals, function(el){ io.observe(el); });
+  } else {
+    Array.prototype.forEach.call(reveals, function(el){ el.classList.add('in'); });
+  }
+
+  /* Hero parallax — Glossier-style gentle movement */
+  var hero = document.getElementById('hero');
+  var heroImg = hero.querySelector('.hero-media img');
+  if(!reduceMotion){
+    var ticking = false;
+    window.addEventListener('scroll', function(){
+      if(!ticking){
+        window.requestAnimationFrame(function(){
+          var y = window.scrollY;
+          if(y < window.innerHeight * 1.2){
+            heroImg.style.transform = 'scale(1.08) translateY(' + (y * 0.18) + 'px)';
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, {passive:true});
+  }
+
+  /* ===== Category pages (hash routing) ===== */
+  var CATS = ['skincare','makeup','balms','body','fragrance','oils'];
+  var homeView = document.getElementById('homeView');
+  var navLinks = document.querySelectorAll('.nav a');
+
+  function showCat(name){
+    var activeCat = null;
+    if(name && CATS.indexOf(name) !== -1) activeCat = name;
+
+    if(activeCat){
+      homeView.style.display = 'none';
+      CATS.forEach(function(c){
+        var v = document.getElementById('view-' + c);
+        if(v) v.classList.toggle('active', c === activeCat);
+      });
+    } else {
+      homeView.style.display = '';
+      CATS.forEach(function(c){
+        var v = document.getElementById('view-' + c);
+        if(v) v.classList.remove('active');
+      });
+    }
+
+    Array.prototype.forEach.call(navLinks, function(a){
+      var h = a.getAttribute('href').replace('#','').replace(/^\//,'');
+      a.classList.toggle('active', h === activeCat);
+    });
+  }
+
+  function route(){
+    var h = location.hash.replace('#','').replace(/^\//,'');
+    var isCat = CATS.indexOf(h) !== -1;
+    showCat(h);
+    if(isCat || h === '' || h === 'top'){
+      window.scrollTo(0,0);
+    } else {
+      var target = document.getElementById(h);
+      if(target){
+        setTimeout(function(){
+          target.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'start'});
+        }, 40);
+      }
+    }
+  }
+
+  window.addEventListener('hashchange', route); location.hash = '#/makeup';
+  route();
+})();
+</script>
+</body>
+</html>
